@@ -1,5 +1,5 @@
 # Grafana Dashboard for Smart Swimming Pool
 
-[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/smart-swimming-pool)
+Discussions: <https://github.com/smart-swimmingpool/smart-swimmingpool.github.io/discussions>
 
 JSON exported dashboard of Smart Swimming Pool
