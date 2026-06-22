@@ -14,8 +14,8 @@ This repository contains a **Grafana dashboard** for visualizing Smart Swimming 
 - 🌡️ **Temperature Monitoring**: Pool water and solar storage temperatures
 - ⚡ **Pump Status**: Real-time pump state visualization
 - ☀️ **Solar Heating**: Solar heating status and efficiency
--  **Time Series**: Historical data visualization
--  **Customizable**: Easily adaptable to your specific setup
+- **Time Series**: Historical data visualization
+- **Customizable**: Easily adaptable to your specific setup
 - 🔄 **MQTT Integration**: Works with Pool Controller MQTT topics
 
 ## Quick Start
