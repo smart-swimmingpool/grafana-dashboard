@@ -6,15 +6,15 @@ Thank you for your interest in contributing to the **Smart Swimming Pool Grafana
 This document provides guidelines for contributing to the project. Please read it
 carefully before submitting your first pull request.
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Code of Conduct](#code-of-conduct)
-- [How to Contribute](#how-to-contribute)
-- [Getting Started](#getting-started)
-- [Dashboard Structure](#dashboard-structure)
-- [Pull Request Process](#pull-request-process)
-- [Commit Message Guidelines](#commit-message-guidelines)
-- [Quality Gates](#quality-gates)
+- [Code of Conduct](#Code of Conduct)
+- [How to Contribute](#How to Contribute)
+- [Getting Started](#Getting Started)
+- [Dashboard Structure](#Dashboard Structure)
+- [Pull Request Process](#Pull Request Process)
+- [Commit Message Guidelines](#Commit Message Guidelines)
+- [Quality Gates](#Quality Gates)
 
 ---
 
@@ -30,7 +30,7 @@ See also: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 ---
 
-## 🌟 How to Contribute
+## How to Contribute
 
 ### Reporting Issues
 
@@ -83,7 +83,7 @@ python -m json.tool dashboard-smart-swimming-pool.json > /dev/null
 
 ---
 
-## 📁 Dashboard Structure
+## Dashboard Structure
 
 The main dashboard file is `dashboard-smart-swimming-pool.json` which contains:
 
@@ -127,7 +127,7 @@ smart-swimmingpool/pool-controller/mode
 
 ---
 
-## 🔄 Pull Request Process
+## Pull Request Process
 
 1. **Fork the repository** and create your branch from `master`
 2. **Make your changes** following the guidelines above
@@ -180,7 +180,7 @@ Closes #123
 
 ---
 
-## 🏆 Quality Gates
+## Quality Gates
 
 All contributions must pass the following quality checks:
 
@@ -207,7 +207,7 @@ time and effort in improving the Smart Swimming Pool Grafana Dashboard!
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [Grafana Documentation](https://grafana.com/docs/)
 - [Smart Swimming Pool Website](https://smart-swimmingpool.com)
