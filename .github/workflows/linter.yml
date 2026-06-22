@@ -1,0 +1,72 @@
+---
+###########################
+###########################
+## Linter GitHub Actions ##
+###########################
+###########################
+name: Lint Code Base
+
+#
+# Documentation:
+# https://help.github.com/en/articles/workflow-syntax-for-github-actions
+#
+
+#############################
+# Start the job on all push #
+#############################
+on:
+  push:
+    branches-ignore:
+      - "master"
+  pull_request:
+
+# Cancel in-progress runs for the same workflow+ref when new commits are pushed
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+###############
+# Set the Job #
+###############
+jobs:
+  super-linter:
+    name: Super-Linter
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      statuses: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Run Super-Linter
+        uses: super-linter/super-linter@v8.7.0
+        env:
+          VALIDATE_ALL_CODEBASE: false
+
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          # Enable relevant linters for JSON and Markdown repository
+          VALIDATE_JSON: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_YAML: true
+          VALIDATE_GITHUB_ACTIONS: true
+          VALIDATE_EDITORCONFIG: true
+
+          # Markdown specific settings - increase line length to 130
+          MARKDOWN_LINT_LINE_LENGTH: 150
+          MARKDOWNLINT_LINE_LENGTH: 150
+
+          # Don't treat warnings as errors
+          WARNINGS_AS_ERRORS: false
+
+          # Logging
+          LOG_LEVEL: NOTICE
