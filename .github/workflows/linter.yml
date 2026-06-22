@@ -64,9 +64,8 @@ jobs:
           # Markdown specific settings - increase line length to 130
           MARKDOWN_LINT_LINE_LENGTH: 150
           MARKDOWNLINT_LINE_LENGTH: 150
-          MARKDOWNLINT_CONFIG_FILE: .markdownlint.yml
           # Disable MD051 and MD034 rules as they're too strict
-          MARKDOWNLINT_RULES: "MD051=false,MD034=false"
+          MARKDOWNLINT_DISABLE_RULES: "MD051,MD034"
 
           # Don't treat warnings as errors
           WARNINGS_AS_ERRORS: false
