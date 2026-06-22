@@ -18,7 +18,7 @@ carefully before submitting your first pull request.
 
 ---
 
-## 🤝 Code of Conduct
+## Code of Conduct
 
 This project adheres to the
 [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html).
@@ -62,7 +62,7 @@ See also: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
