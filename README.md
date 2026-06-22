@@ -18,7 +18,7 @@ This repository contains a **Grafana dashboard** for visualizing Smart Swimming 
 -  **Customizable**: Easily adaptable to your specific setup
 - 🔄 **MQTT Integration**: Works with Pool Controller MQTT topics
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -123,7 +123,7 @@ For complete MQTT topic reference, see:
 - Export and update the JSON file
 - Document your changes in the CHANGELOG
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) before submitting pull requests.
 
