@@ -65,7 +65,7 @@ jobs:
           MARKDOWN_LINT_LINE_LENGTH: 150
           MARKDOWNLINT_LINE_LENGTH: 150
           # Disable MD051 and MD034 rules as they're too strict
-          MARKDOWNLINT_DISABLE_RULES: "MD051,MD034"
+          MARKDOWNLINT_RULES: "MD051=false,MD034=false"
 
           # Don't treat warnings as errors
           WARNINGS_AS_ERRORS: false
