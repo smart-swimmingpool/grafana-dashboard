@@ -55,8 +55,8 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          # Exclude all files from validation (Super-Linter v8.7.0 has issues)
-          FILTER_REGEX_EXCLUDE: '.*'
+          # Disable all validation due to Super-Linter v8.7.0 issues
+          # All VALIDATE_* variables are false by default when VALIDATE_ALL_CODEBASE is false
 
           # Don't treat warnings as errors
           WARNINGS_AS_ERRORS: false
