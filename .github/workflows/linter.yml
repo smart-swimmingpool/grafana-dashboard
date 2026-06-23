@@ -50,16 +50,15 @@ jobs:
       - name: Run MegaLinter
         uses: oxsecurity/megalinter@v7
         env:
-          # MegaLinter configuration
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          # Enable relevant linters for Grafana dashboard (JSON/YAML/Markdown)
-          ENABLE: JSON,YAML,MARKDOWN,EDITORCONFIG
-
-          # Disable others
-          DISABLE: BASH,CLANG_FORMAT,CLANG_TIDY,COPYPASTE,CPP,DOCKERFILE,GO,GROOVY,HTML,JAVA,JAVASCRIPT,KOTLIN,OPENAPI,PERL,PHP,PYTHON,RUBY,RUST,SCALA,SHELL,SQL,TERRAFORM,TSQL,XML
+          # Validate JSON, YAML, and Markdown files
+          VALIDATE_YAML: true
+          VALIDATE_JSON: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_EDITORCONFIG: true
 
           # Exclude workflow files and markdown
           FILTER_REGEX_EXCLUDE: ".*/(\.github)/.*|.*\.md$"
@@ -71,5 +70,4 @@ jobs:
           # Don't treat warnings as errors
           WARNINGS_AS_ERRORS: false
 
-          # Logging
           LOG_LEVEL: NOTICE
