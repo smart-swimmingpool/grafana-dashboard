@@ -62,12 +62,6 @@ jobs:
           # Exclude markdown files due to Super-Linter v8.7.0 MD034 bug
           FILTER_REGEX_EXCLUDE: '.*\.md$'
 
-          # Markdown specific settings - increase line length to 150
-          MARKDOWN_LINT_LINE_LENGTH: 150
-          MARKDOWNLINT_LINE_LENGTH: 150
-          # Note: Markdown files excluded via FILTER_REGEX_EXCLUDE due to Super-Linter v8.7.0 MD034 bug
-          MARKDOWNLINT_RULES: "MD051=false,MD034=false"
-
           # Don't treat warnings as errors
           WARNINGS_AS_ERRORS: false
 
