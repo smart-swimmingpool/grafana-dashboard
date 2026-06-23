@@ -48,14 +48,14 @@ jobs:
           fetch-depth: 0
 
       - name: Run Super-Linter
-        uses: super-linter/super-linter@v8.7.0
+        uses: super-linter/super-linter@v8.6.0
         env:
           VALIDATE_ALL_CODEBASE: false
 
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          # Disable all validation due to Super-Linter v8.7.0 issues
+          # Disable all validation due to Super-Linter v8.6.0 issues
           # All VALIDATE_* variables are false by default when VALIDATE_ALL_CODEBASE is false
 
           # Don't treat warnings as errors
