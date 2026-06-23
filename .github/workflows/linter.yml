@@ -32,6 +32,6 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG_FILE: .megalinter.yml
+          MEGALINTER_CONFIG: .megalinter.yml
           WARNINGS_AS_ERRORS: false
           LOG_LEVEL: NOTICE
