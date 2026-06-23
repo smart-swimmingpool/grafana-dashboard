@@ -17,6 +17,7 @@ name: Lint Code Base
 on:
   push:
     branches-ignore:
+      - "main"
       - "master"
   pull_request:
 
@@ -51,7 +52,7 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false
 
-          DEFAULT_BRANCH: master
+          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
           # Enable relevant linters for JSON and Markdown repository

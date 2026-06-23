@@ -2,6 +2,7 @@ name: CI
 on:
   push:
     branches:
+      - main
       - master
   repository_dispatch:
     types: [doc_update]
@@ -57,5 +58,5 @@ jobs:
           #   keep_files: true
           user_name: stritti
           user_email: stritti@users.noreply.github.com
-          publish_branch: master
+          publish_branch: main
         #   cname: example.com
