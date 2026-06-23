@@ -32,6 +32,6 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILTER_REGEX_EXCLUDE: ".*/(\\.github)/.*|.*\\.md$"
+          CONFIG_FILE: .megalinter.yml
           WARNINGS_AS_ERRORS: false
           LOG_LEVEL: NOTICE
