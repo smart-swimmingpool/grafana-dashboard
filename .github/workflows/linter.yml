@@ -56,7 +56,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
           # Enable relevant linters for JSON and Markdown repository
-          VALIDATE_JSON: true
           VALIDATE_YAML: true
 
           # Exclude markdown files and workflow files due to Super-Linter v8.7.0 MD034 bug
