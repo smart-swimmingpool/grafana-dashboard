@@ -44,22 +44,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
 
-      - name: Run Super-Linter
-        uses: super-linter/super-linter@v8.6.0
-        env:
-          VALIDATE_ALL_CODEBASE: false
-
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-          # Disable all validation due to Super-Linter v8.6.0 issues
-          # All VALIDATE_* variables are false by default when VALIDATE_ALL_CODEBASE is false
-
-          # Don't treat warnings as errors
-          WARNINGS_AS_ERRORS: false
-
-          # Logging
-          LOG_LEVEL: NOTICE
+      - name: Skip Super-Linter
+        run: echo "Super-Linter disabled due to v8.6.0 compatibility issues"
