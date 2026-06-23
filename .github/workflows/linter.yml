@@ -61,7 +61,7 @@ jobs:
           VALIDATE_EDITORCONFIG: true
 
           # Exclude workflow files and markdown
-          FILTER_REGEX_EXCLUDE: ".*/(\.github)/.*|.*\.md$"
+          FILTER_REGEX_EXCLUDE: ".*/(\\.github)/.*|.*\\.md$"
 
           # Markdown specific settings
           MARKDOWN_LINT_LINE_LENGTH: 150
