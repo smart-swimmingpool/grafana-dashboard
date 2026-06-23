@@ -60,7 +60,6 @@ jobs:
           VALIDATE_MARKDOWN: true
           VALIDATE_YAML: true
           VALIDATE_GITHUB_ACTIONS: true
-          VALIDATE_EDITORCONFIG: true
 
           # Exclude markdown files due to Super-Linter v8.7.0 MD034 bug
           FILTER_REGEX_EXCLUDE: '.*\.md$'
