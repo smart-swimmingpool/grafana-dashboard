@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -33,5 +33,6 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MEGALINTER_CONFIG: .megalinter.yml
+          PARALLEL: false
           WARNINGS_AS_ERRORS: false
-          LOG_LEVEL: NOTICE
+          LOG_LEVEL: ERROR
