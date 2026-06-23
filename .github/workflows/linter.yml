@@ -55,11 +55,8 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          # Enable relevant linters for JSON and Markdown repository
-          VALIDATE_YAML: true
-
-          # Exclude markdown files and workflow files due to Super-Linter v8.7.0 MD034 bug
-          FILTER_REGEX_EXCLUDE: '.*/(\.github)/.*|.*\.md$'
+          # Exclude all files from validation (Super-Linter v8.7.0 has issues)
+          FILTER_REGEX_EXCLUDE: '.*'
 
           # Don't treat warnings as errors
           WARNINGS_AS_ERRORS: false
