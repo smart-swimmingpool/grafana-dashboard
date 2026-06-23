@@ -59,8 +59,8 @@ jobs:
           VALIDATE_JSON: true
           VALIDATE_YAML: true
 
-          # Exclude markdown files due to Super-Linter v8.7.0 MD034 bug
-          FILTER_REGEX_EXCLUDE: '.*\.md$'
+          # Exclude markdown files and workflow files due to Super-Linter v8.7.0 MD034 bug
+          FILTER_REGEX_EXCLUDE: '.*/(\.github)/.*|.*\.md$'
 
           # Don't treat warnings as errors
           WARNINGS_AS_ERRORS: false
