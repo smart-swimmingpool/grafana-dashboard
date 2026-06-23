@@ -37,8 +37,8 @@ disable:
 
 # Exclude patterns
 filter_regex_exclude:
-  - .*/(\\.github)/.*
-  - .*\\.md$
+  - '.*(\.github)/.*'
+  - '.*\.md$'
 
 # Markdown settings
 markdown_lint_line_length: 150
