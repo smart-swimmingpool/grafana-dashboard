@@ -63,7 +63,7 @@ jobs:
           VALIDATE_EDITORCONFIG: true
 
           # Exclude markdown files due to Super-Linter v8.7.0 MD034 bug
-          FILTER_REGEX_EXCLUDE: .*\.md$
+          FILTER_REGEX_EXCLUDE: '.*\.md$'
 
           # Markdown specific settings - increase line length to 130
           MARKDOWN_LINT_LINE_LENGTH: 150
