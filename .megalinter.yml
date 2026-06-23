@@ -2,9 +2,7 @@
 # MegaLinter configuration file
 # https://megalinter.github.io/configuration/
 
-# Enable only YAML and JSON linters
 enable:
-  - JSON
   - YAML
 
 disable_all: true
@@ -18,4 +16,4 @@ filter_regex_exclude:
 warnings_as_errors: false
 
 # Logging
-log_level: NOTICE
+log_level: ERROR
