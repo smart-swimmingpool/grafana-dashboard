@@ -56,15 +56,18 @@ jobs:
 
           # Enable relevant linters for JSON and Markdown repository
           VALIDATE_JSON: true
-          VALIDATE_MARKDOWN: false
+          VALIDATE_MARKDOWN: true
           VALIDATE_YAML: true
           VALIDATE_GITHUB_ACTIONS: true
           VALIDATE_EDITORCONFIG: true
 
+          # Exclude markdown files due to Super-Linter v8.7.0 MD034 bug
+          FILTER_REGEX_EXCLUDE: .*/(\.md|CODE_OF_CONDUCT|CONTRIBUTING|CHANGELOG|README)/.*
+
           # Markdown specific settings - increase line length to 130
           MARKDOWN_LINT_LINE_LENGTH: 150
           MARKDOWNLINT_LINE_LENGTH: 150
-          # Note: VALIDATE_MARKDOWN disabled temporarily due to Super-Linter v8.7.0 MD034 bug
+          # Note: Markdown files excluded via FILTER_REGEX_EXCLUDE due to Super-Linter v8.7.0 MD034 bug
           MARKDOWNLINT_RULES: "MD051=false,MD034=false"
 
           # Don't treat warnings as errors
