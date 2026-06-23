@@ -1,19 +1,6 @@
 ---
-###########################
-###########################
-## Linter GitHub Actions ##
-###########################
-###########################
 name: Lint Code Base
 
-#
-# Documentation:
-# https://help.github.com/en/articles/workflow-syntax-for-github-actions
-#
-
-#############################
-# Start the job on all push #
-#############################
 on:
   push:
     branches-ignore:
@@ -21,7 +8,6 @@ on:
       - "master"
   pull_request:
 
-# Cancel in-progress runs for the same workflow+ref when new commits are pushed
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
   cancel-in-progress: true
@@ -29,17 +15,10 @@ concurrency:
 permissions:
   contents: read
 
-###############
-# Set the Job #
-###############
 jobs:
   mega-linter:
     name: MegaLinter
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      statuses: write
 
     steps:
       - name: Checkout Code
@@ -53,21 +32,6 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-          # Validate JSON, YAML, and Markdown files
-          VALIDATE_YAML: true
-          VALIDATE_JSON: true
-          VALIDATE_MARKDOWN: true
-          VALIDATE_EDITORCONFIG: true
-
-          # Exclude workflow files and markdown
           FILTER_REGEX_EXCLUDE: ".*/(\\.github)/.*|.*\\.md$"
-
-          # Markdown specific settings
-          MARKDOWN_LINT_LINE_LENGTH: 150
-          MARKDOWNLINT_LINE_LENGTH: 150
-
-          # Don't treat warnings as errors
           WARNINGS_AS_ERRORS: false
-
           LOG_LEVEL: NOTICE
