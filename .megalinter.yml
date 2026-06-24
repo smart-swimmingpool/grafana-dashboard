@@ -17,6 +17,7 @@ ENABLE:
 # Disable all other linters
 DISABLE:
   - ALL
+  - CPP
   - EDITORCONFIG
   - MARKDOWN_LINK_CHECK
 
