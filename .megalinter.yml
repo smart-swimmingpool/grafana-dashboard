@@ -1,19 +1,43 @@
----
-# MegaLinter configuration file
-# https://megalinter.github.io/configuration/
+# MegaLinter Configuration for Grafana Dashboard Module
+# Replaces Super-Linter with equivalent rules
+# https://megalinter.io/latest/configuration/
 
-enable:
+---
+# Enable only the linters that were enabled in Super-Linter
+# Grafana Dashboard module has no C++ code, so we exclude CPP
+ENABLE:
+  - BASH
+  - EDITORCONFIG
+  - GITHUB_ACTIONS
+  - GITLEAKS
+  - JSON
+  - MARKDOWN
   - YAML
 
-disable_all: true
+# Disable all other linters
+DISABLE:
+  - ALL
 
-# Exclude patterns
-filter_regex_exclude:
-  - '.*(\.github)/.*'
-  - '.*\.md$'
+# Filter patterns - exclude build artifacts and dependencies
+FILTER_REGEX_EXCLUDE:
+  - .*/(\.github|\.vscode|build|\.git|node_modules|docs|public)/.*
+  - .*\.min\.(js|css)
+
+# Markdown specific settings - line length 150
+MARKDOWN_LINT_LINE_LENGTH: 150
+
+# Use custom configuration files
+MARKDOWNLINT_CONFIG_FILE: .markdownlint.yml
+YAMLLINT_CONFIG_FILE: .yamllint.yml
 
 # Don't treat warnings as errors
-warnings_as_errors: false
+WARNINGS_AS_ERRORS: false
+
+# Only lint changed files in PR mode
+VALIDATE_ALL_CODEBASE: false
 
 # Logging
-log_level: ERROR
+LOG_LEVEL: NOTICE
+
+# Parallel execution
+PARALLEL: false
