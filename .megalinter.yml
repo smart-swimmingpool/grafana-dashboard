@@ -22,9 +22,7 @@ DISABLE:
 
 # Filter patterns - exclude build artifacts and dependencies
 # Must be a string, not a list
-FILTER_REGEX_EXCLUDE: |
-  .*/(\.github|\.vscode|build|\.git|node_modules|docs|public)/.*
-  .*\.min\.(js|css)
+FILTER_REGEX_EXCLUDE: ".*\/(\.github|\.vscode|build|\.git|node_modules|docs|public)\/.*|.*\.min\.(js|css)"
 
 # Markdown specific settings - line length 150
 MARKDOWN_LINT_LINE_LENGTH: 150
