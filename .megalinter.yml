@@ -14,9 +14,8 @@ ENABLE:
   - MARKDOWN
   - YAML
 
-# Disable all other linters
+# Disable specific linters
 DISABLE:
-  - ALL
   - CPP
   - EDITORCONFIG
   - MARKDOWN_LINK_CHECK
