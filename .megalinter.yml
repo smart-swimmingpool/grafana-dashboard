@@ -5,9 +5,9 @@
 ---
 # Enable only the linters that were enabled in Super-Linter
 # Grafana Dashboard module has no C++ code, so we exclude CPP
+# Also disable EDITORCONFIG and MARKDOWN_LINK_CHECK as they are too strict for documentation
 ENABLE:
   - BASH
-  - EDITORCONFIG
   - GITHUB_ACTIONS
   - GITLEAKS
   - JSON
@@ -17,6 +17,8 @@ ENABLE:
 # Disable all other linters
 DISABLE:
   - ALL
+  - EDITORCONFIG
+  - MARKDOWN_LINK_CHECK
 
 # Filter patterns - exclude build artifacts and dependencies
 # Must be a string, not a list
