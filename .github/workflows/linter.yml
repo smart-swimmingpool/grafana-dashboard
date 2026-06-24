@@ -37,7 +37,12 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MEGALINTER_CONFIG: .megalinter.yml
+          ENABLE: BASH,GITHUB_ACTIONS,GITLEAKS,JSON,MARKDOWN,YAML
+          DISABLE: CPP,EDITORCONFIG,MARKDOWN_LINK_CHECK
+          FILTER_REGEX_EXCLUDE: ".*\/(\.github|\.vscode|build|\.git|node_modules|docs|public)\/.*|.*\.min\.(js|css)"
+          MARKDOWN_LINT_LINE_LENGTH: 150
+          MARKDOWNLINT_CONFIG_FILE: .markdownlint.yml
+          YAMLLINT_CONFIG_FILE: .yamllint.yml
           PARALLEL: false
           WARNINGS_AS_ERRORS: false
           LOG_LEVEL: NOTICE
