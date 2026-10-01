@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- New dashboard for Pool Controller v5.x (Home Assistant MQTT discovery + InfluxDB integration):
+  temperatures, pump state timeline, operation mode, effective runtime, circulation extension
+  and diagnostics (WiFi, uptime, free heap, controller temperature)
+- `scripts/generate_dashboard.py` to generate the dashboard JSON
+- Dashboard screenshot (example data) in `docs/`
 - Added Super-Linter v8.7.0 workflow for code quality checks
 - Added CODE_OF_CONDUCT.md (Contributor Covenant v1.4)
 - Added CONTRIBUTING.md with development guidelines
@@ -16,6 +21,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Renamed the openHAB based dashboard for Pool Controller v1/v2 to
+  `dashboard-smart-swimming-pool-openhab-legacy.json`
+- Rewrote README to match the actual dashboards
 - Updated GitHub Actions to use actions/checkout@v7 (was v2)
 - Updated actions/cache to v3 (was v2)
 - Updated actions/setup-python to v5 (was v2)
