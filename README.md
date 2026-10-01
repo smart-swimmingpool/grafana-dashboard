@@ -1,11 +1,11 @@
-# Grafana Dashboard | \ud83c\udfca Smart Swimming Pool
+# Grafana Dashboard | 🏊 Smart Swimming Pool
 
 [![Smart Swimmingpool](https://img.shields.io/badge/%F0%9F%8F%8A%20-Smart%20Swimmingpool-blue.svg)](https://github.com/smart-swimmingpool)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## \u2728 Overview
+## ✨ Overview
 
 This repository contains a **Grafana dashboard** for visualizing Smart Swimming Pool data. The dashboard provides comprehensive monitoring of your pool's vital statistics including temperatures, pump status, solar heating, and historical trends.
 
@@ -13,37 +13,37 @@ This repository contains a **Grafana dashboard** for visualizing Smart Swimming 
 
 ---
 
-## \u2728 Features
+## ✨ Features
 
-### \ud83c\udf21\ufe0f Temperature Monitoring
-- **Pool water temperature** \u2014 Current and historical
-- **Solar collector temperature** \u2014 Current and historical
-- **Temperature difference** \u2014 Pool vs Solar for efficiency analysis
-- **Temperature history** \u2014 Time series graphs with customizable time ranges
+### 🌡️ Temperature Monitoring
+- **Pool water temperature** — Current and historical
+- **Solar collector temperature** — Current and historical
+- **Temperature difference** — Pool vs Solar for efficiency analysis
+- **Temperature history** — Time series graphs with customizable time ranges
 
-### \u26a1 Pump & System Status
-- **Pump status** \u2014 Real-time on/off state for pool and solar pumps
-- **Operation mode** \u2014 Current mode (Auto, Manual, Boost, Timer)
-- **Uptime** \u2014 Pool controller uptime monitoring
-- **Pump runtime** \u2014 Daily runtime tracking
+### ⚡ Pump & System Status
+- **Pump status** — Real-time on/off state for pool and solar pumps
+- **Operation mode** — Current mode (Auto, Manual, Boost, Timer)
+- **Uptime** — Pool controller uptime monitoring
+- **Pump runtime** — Daily runtime tracking
 
-### \u2600\ufe0f Solar Heating Analysis
-- **Solar heating status** \u2014 On/off state
-- **Solar runtime** \u2014 Daily solar heating runtime
-- **Efficiency calculation** \u2014 Based on temperature differential
-- **Energy savings** \u2014 Estimated savings from solar heating
+### ☀️ Solar Heating Analysis
+- **Solar heating status** — On/off state
+- **Solar runtime** — Daily solar heating runtime
+- **Efficiency calculation** — Based on temperature differential
+- **Energy savings** — Estimated savings from solar heating
 
-### \ud83d\udcc8 Data Visualization
-- **Time series graphs** \u2014 Historical data with zoom and pan
-- **Gauges** \u2014 Current values at a glance
-- **Status panels** \u2014 Binary states with color coding
-- **Statistics** \u2014 Aggregated data (min, max, avg)
+### 📈 Data Visualization
+- **Time series graphs** — Historical data with zoom and pan
+- **Gauges** — Current values at a glance
+- **Status panels** — Binary states with color coding
+- **Statistics** — Aggregated data (min, max, avg)
 
 ---
 
-## \ud83d\ude80 Quick Start
+## 🚀 Quick Start
 
-### \u26a1 Prerequisites
+### ⚡ Prerequisites
 
 | Component | Version | Notes |
 |-----------|---------|-------|
@@ -52,7 +52,7 @@ This repository contains a **Grafana dashboard** for visualizing Smart Swimming 
 | MQTT Broker | Any | Mosquitto, EMQX, etc. |
 | Pool Controller | v3.0+ | Running and publishing MQTT data |
 
-### \u26a1 Installation
+### ⚡ Installation
 
 #### Option A: Direct Import (Recommended)
 
@@ -68,7 +68,7 @@ This repository contains a **Grafana dashboard** for visualizing Smart Swimming 
 
 2. **Import into Grafana:**
    - Open Grafana in your browser
-   - Go to **Dashboards \u2192 Import**
+   - Go to **Dashboards → Import**
    - Upload the `dashboard-smart-swimming-pool.json` file
    - Select your **MQTT data source**
    - Click **Import**
@@ -76,27 +76,27 @@ This repository contains a **Grafana dashboard** for visualizing Smart Swimming 
 #### Option B: Grafana Catalog
 
 1. Open Grafana
-2. Go to **Dashboards \u2192 Import**
+2. Go to **Dashboards → Import**
 3. Enter dashboard ID: **`13374`** (if published to Grafana.com)
 4. Select your MQTT data source
 5. Click **Load** then **Import**
 
 ---
 
-## \ud83d\udcc1 Dashboard Configuration
+## 📁 Dashboard Configuration
 
-### \u26a1 MQTT Data Source Setup
+### ⚡ MQTT Data Source Setup
 
 1. **Install MQTT plugin:**
    ```bash
    # For Grafana CLI
    grafana-cli plugins install marcusolsson-grafana-mqtt
    
-   # Or via Grafana UI: Configuration \u2192 Plugins \u2192 Install
+   # Or via Grafana UI: Configuration → Plugins → Install
    ```
 
 2. **Configure MQTT data source:**
-   - Go to **Configuration \u2192 Data Sources \u2192 Add data source**
+   - Go to **Configuration → Data Sources → Add data source**
    - Select **MQTT**
    - Configure settings:
      - **Name:** `Smart Swimming Pool MQTT`
@@ -111,7 +111,7 @@ This repository contains a **Grafana dashboard** for visualizing Smart Swimming 
    - Click **Save & Test**
    - Verify connection is successful
 
-### \u26a1 Dashboard Variables (Optional)
+### ⚡ Dashboard Variables (Optional)
 
 The dashboard supports **template variables** for easy customization:
 
@@ -127,15 +127,15 @@ The dashboard supports **template variables** for easy customization:
 
 ---
 
-## \ud83d\udcc1 Dashboard Structure
+## 📁 Dashboard Structure
 
-### \ud83c\udf21 Temperature Section
+### 🌡 Temperature Section
 
 **Panels:**
-1. **Pool Temperature Gauge** \u2014 Current pool water temperature
-2. **Solar Temperature Gauge** \u2014 Current solar collector temperature
-3. **Temperature History Graph** \u2014 Both temperatures over time
-4. **Temperature Difference** \u2014 Solar - Pool (\u00b0C)
+1. **Pool Temperature Gauge** — Current pool water temperature
+2. **Solar Temperature Gauge** — Current solar collector temperature
+3. **Temperature History Graph** — Both temperatures over time
+4. **Temperature Difference** — Solar - Pool (°C)
 
 **MQTT Topics:**
 ```text
@@ -143,13 +143,13 @@ homeassistant/sensor/pool-controller/pool-temp/state
 homeassistant/sensor/pool-controller/solar-temp/state
 ```
 
-### \u26a1 Pump Status Section
+### ⚡ Pump Status Section
 
 **Panels:**
-1. **Pool Pump Status** \u2014 On/Off with color coding
-2. **Solar Pump Status** \u2014 On/Off with color coding
-3. **Pump Runtime Today** \u2014 Total runtime in hours:minutes
-4. **Pump Runtime History** \u2014 Daily runtime over time
+1. **Pool Pump Status** — On/Off with color coding
+2. **Solar Pump Status** — On/Off with color coding
+3. **Pump Runtime Today** — Total runtime in hours:minutes
+4. **Pump Runtime History** — Daily runtime over time
 
 **MQTT Topics:**
 ```text
@@ -159,13 +159,13 @@ smart-swimmingpool/pool-controller/pump/pool/runtime/today
 smart-swimmingpool/pool-controller/pump/solar/runtime/today
 ```
 
-### \u2600 Solar Heating Section
+### ☀ Solar Heating Section
 
 **Panels:**
-1. **Solar Heating Status** \u2014 On/Off
-2. **Solar Runtime Today** \u2014 Total solar heating runtime
-3. **Solar Heating Efficiency** \u2014 Calculated from temperature differential
-4. **Energy Savings Estimate** \u2014 Based on runtime and efficiency
+1. **Solar Heating Status** — On/Off
+2. **Solar Runtime Today** — Total solar heating runtime
+3. **Solar Heating Efficiency** — Calculated from temperature differential
+4. **Energy Savings Estimate** — Based on runtime and efficiency
 
 **MQTT Topics:**
 ```text
@@ -173,13 +173,13 @@ homeassistant/switch/pool-controller/solar-pump/state
 smart-swimmingpool/pool-controller/solar/runtime/today
 ```
 
-### \u26a1 System Section
+### ⚡ System Section
 
 **Panels:**
-1. **Operation Mode** \u2014 Current mode (Auto, Manual, Boost, Timer)
-2. **Uptime** \u2014 Controller uptime
-3. **System Health** \u2014 Memory usage, boot count
-4. **Last Update** \u2014 Timestamp of last MQTT message
+1. **Operation Mode** — Current mode (Auto, Manual, Boost, Timer)
+2. **Uptime** — Controller uptime
+3. **System Health** — Memory usage, boot count
+4. **Last Update** — Timestamp of last MQTT message
 
 **MQTT Topics:**
 ```text
@@ -191,7 +191,7 @@ smart-swimmingpool/pool-controller/system/memory-free
 
 ---
 
-## \ud83d\udcc1 Complete MQTT Topic Reference
+## 📁 Complete MQTT Topic Reference
 
 ### State Topics (Home Assistant Discovery)
 
@@ -260,9 +260,9 @@ smart-swimmingpool/pool-controller/system/heap-fragmentation
 
 ---
 
-## \ud83d\udee0\ufe0f Customization
+## 🛠️ Customization
 
-### \u26a1 Adding New Panels
+### ⚡ Adding New Panels
 
 1. **Edit dashboard in Grafana:**
    - Click **Edit** (pencil icon) on the dashboard
@@ -275,7 +275,7 @@ smart-swimmingpool/pool-controller/system/heap-fragmentation
    - **Visualization:** Choose appropriate type (Graph, Gauge, Stat, etc.)
 
 3. **Format data:**
-   - **Unit:** \u00b0C, \u00b0F, hours, etc.
+   - **Unit:** °C, °F, hours, etc.
    - **Decimals:** Number of decimal places
    - **Thresholds:** Color coding for different value ranges
 
@@ -284,11 +284,11 @@ smart-swimmingpool/pool-controller/system/heap-fragmentation
    - Click **Save Dashboard** (disk icon) to save changes
 
 5. **Export updated dashboard:**
-   - Click **Save Dashboard \u2192 Export \u2192 Save to file**
+   - Click **Save Dashboard → Export → Save to file**
    - Update the `dashboard-smart-swimming-pool.json` file
    - Submit a pull request
 
-### \u26a1 Modifying Existing Panels
+### ⚡ Modifying Existing Panels
 
 1. Click **Edit** on the panel you want to modify
 2. Adjust settings as needed:
@@ -300,7 +300,7 @@ smart-swimmingpool/pool-controller/system/heap-fragmentation
 4. **Export and update** the JSON file
 5. **Document changes** in CHANGELOG.md
 
-### \u26a1 Creating Multiple Dashboards
+### ⚡ Creating Multiple Dashboards
 
 For advanced users, you can create **multiple dashboards** for different purposes:
 
@@ -315,7 +315,7 @@ For advanced users, you can create **multiple dashboards** for different purpose
 
 ---
 
-## \u26a1 Example Queries
+## ⚡ Example Queries
 
 ### Temperature Query
 
@@ -355,37 +355,37 @@ Use Grafana's **Transform** feature to calculate efficiency:
 4. Select **Binary operation: Subtraction**
 5. Field A: Solar Temperature
 6. Field B: Pool Temperature
-7. Result: Temperature Difference (\u00b0C)
+7. Result: Temperature Difference (°C)
 
 ---
 
-## \u26a1 Tips & Best Practices
+## ⚡ Tips & Best Practices
 
 ### Dashboard Design
 
-1. **Keep it simple** \u2014 Start with essential panels, add more as needed
-2. **Use consistent colors** \u2014 Green for good/on, Red for bad/off, etc.
-3. **Group related panels** \u2014 Temperature, Pumps, Solar, System
-4. **Use appropriate time ranges** \u2014 24h for daily, 7d for weekly, 30d for monthly
-5. **Add descriptions** \u2014 Explain what each panel shows
+1. **Keep it simple** — Start with essential panels, add more as needed
+2. **Use consistent colors** — Green for good/on, Red for bad/off, etc.
+3. **Group related panels** — Temperature, Pumps, Solar, System
+4. **Use appropriate time ranges** — 24h for daily, 7d for weekly, 30d for monthly
+5. **Add descriptions** — Explain what each panel shows
 
 ### Performance
 
-1. **Limit data points** \u2014 Use `$__interval` for appropriate resolution
-2. **Use retained messages** \u2014 Reduces MQTT traffic
-3. **Avoid too many panels** \u2014 Each panel adds query load
-4. **Use dashboard links** \u2014 Link between related dashboards
+1. **Limit data points** — Use `$__interval` for appropriate resolution
+2. **Use retained messages** — Reduces MQTT traffic
+3. **Avoid too many panels** — Each panel adds query load
+4. **Use dashboard links** — Link between related dashboards
 
 ### MQTT Broker
 
-1. **Enable persistence** \u2014 Store retained messages across broker restarts
-2. **Set appropriate QoS** \u2014 QoS 1 for important data, QoS 0 for high-frequency
-3. **Monitor broker health** \u2014 Check memory usage, connection count
-4. **Secure your broker** \u2014 Use authentication and TLS for production
+1. **Enable persistence** — Store retained messages across broker restarts
+2. **Set appropriate QoS** — QoS 1 for important data, QoS 0 for high-frequency
+3. **Monitor broker health** — Check memory usage, connection count
+4. **Secure your broker** — Use authentication and TLS for production
 
 ---
 
-## \u26a1 Troubleshooting
+## ⚡ Troubleshooting
 
 | Issue | Possible Cause | Solution |
 |-------|---------------|----------|
@@ -399,7 +399,7 @@ Use Grafana's **Transform** feature to calculate efficiency:
 ### Debugging Steps
 
 1. **Check MQTT data source:**
-   - Go to **Configuration \u2192 Data Sources**
+   - Go to **Configuration → Data Sources**
    - Click on your MQTT data source
    - Click **Test Connection**
 
@@ -417,14 +417,14 @@ Use Grafana's **Transform** feature to calculate efficiency:
 
 ---
 
-## \u26a1 Advanced Configuration
+## ⚡ Advanced Configuration
 
 ### Alerts
 
 Set up alerts for abnormal conditions:
 
 1. **High pool temperature:**
-   - Trigger when pool temp > 35\u00b0C
+   - Trigger when pool temp > 35°C
    - Notification: "Pool temperature is too high!"
 
 2. **Pump runtime too long:**
@@ -432,28 +432,28 @@ Set up alerts for abnormal conditions:
    - Notification: "Pool pump has been running too long!"
 
 3. **Low temperature difference:**
-   - Trigger when solar - pool < 5\u00b0C
+   - Trigger when solar - pool < 5°C
    - Notification: "Solar heating may not be effective"
 
 ### Annotations
 
 Add annotations for important events:
 
-1. **Manual mode changes** \u2014 Annotate when mode changes to Manual
-2. **Boost mode activation** \u2014 Annotate when Boost mode is activated
-3. **Maintenance events** \u2014 Annotate pool cleaning, chemical additions
+1. **Manual mode changes** — Annotate when mode changes to Manual
+2. **Boost mode activation** — Annotate when Boost mode is activated
+3. **Maintenance events** — Annotate pool cleaning, chemical additions
 
 ### Dashboard Links
 
 Create links between dashboards:
 
-1. **Overview \u2192 History** \u2014 Link to detailed history dashboard
-2. **Overview \u2192 Efficiency** \u2014 Link to efficiency analysis
-3. **History \u2192 Specific Day** \u2014 Link to day-specific dashboard
+1. **Overview → History** — Link to detailed history dashboard
+2. **Overview → Efficiency** — Link to efficiency analysis
+3. **History → Specific Day** — Link to day-specific dashboard
 
 ---
 
-## \ud83e\udd1d Contributing
+## 🤝 Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -469,21 +469,21 @@ We welcome contributions! Please follow these steps:
 ### Quality Checks
 
 Before submitting:
-- \u2705 Validate JSON: `python -m json.tool dashboard-smart-swimming-pool.json > /dev/null`
-- \u2705 Or use jq: `jq empty dashboard-smart-swimming-pool.json`
-- \u2705 Test import in Grafana
-- \u2705 Verify all panels show data
-- \u2705 Check for typos and formatting issues
+- ✅ Validate JSON: `python -m json.tool dashboard-smart-swimming-pool.json > /dev/null`
+- ✅ Or use jq: `jq empty dashboard-smart-swimming-pool.json`
+- ✅ Test import in Grafana
+- ✅ Verify all panels show data
+- ✅ Check for typos and formatting issues
 
 ---
 
-## \ud83d\udcdc License
+## 📜 License
 
-[MIT License](LICENSE) \u2013 Free to use, modify, and share.
+[MIT License](LICENSE) – Free to use, modify, and share.
 
 ---
 
-## \ud83c\udf10 Community & Support
+## 🌐 Community & Support
 
 - **Discussions:** [GitHub Discussions](https://github.com/smart-swimmingpool/smart-swimmingpool.github.io/discussions)
 - **Website:** [smart-swimmingpool.com](https://smart-swimmingpool.com)
@@ -496,7 +496,7 @@ Before submitting:
 
 ---
 
-## \ud83d\udce2 Related Projects
+## 📢 Related Projects
 
 | Project | Description |
 |---------|-------------|
@@ -508,24 +508,24 @@ Before submitting:
 
 ---
 
-## \ud83d\udcbb Additional Resources
+## 💻 Additional Resources
 
 ### Grafana
-- [Grafana Documentation](https://grafana.com/docs/) \u2014 Official Grafana docs
-- [Grafana Tutorials](https://grafana.com/tutorials/) \u2014 Learning resources
-- [Grafana MQTT Plugin](https://github.com/marcusolsson/grafana-mqtt) \u2014 Plugin source code
+- [Grafana Documentation](https://grafana.com/docs/) — Official Grafana docs
+- [Grafana Tutorials](https://grafana.com/tutorials/) — Learning resources
+- [Grafana MQTT Plugin](https://github.com/marcusolsson/grafana-mqtt) — Plugin source code
 
 ### MQTT
-- [MQTT Protocol](https://mqtt.org/) \u2014 MQTT specification
-- [MQTT Explorer](http://mqtt-explorer.com/) \u2014 MQTT client for testing
-- [Mosquitto](https://mosquitto.org/) \u2014 Popular MQTT broker
+- [MQTT Protocol](https://mqtt.org/) — MQTT specification
+- [MQTT Explorer](http://mqtt-explorer.com/) — MQTT client for testing
+- [Mosquitto](https://mosquitto.org/) — Popular MQTT broker
 
 ### Smart Home
-- [Home Assistant](https://www.home-assistant.io/) \u2014 Open source home automation
-- [Home Assistant MQTT Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) \u2014 Auto-discovery documentation
+- [Home Assistant](https://www.home-assistant.io/) — Open source home automation
+- [Home Assistant MQTT Discovery](https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery) — Auto-discovery documentation
 
 ---
 
 <p align="center">
-  Made with \u2764\ufe0f by the Smart Swimming Pool community
+  Made with ❤️ by the Smart Swimming Pool community
 </p>
